@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('products_requierements', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('product_id');
+            $table->text('operational_system');
+            $table->text('memory');
+            $table->text('storage');
+            $table->text('observations');
+            $table->enum('type', ['MINIMUNS', 'RECOMMENDED']);
+            $table
+            ->foreign('product_id')
+            ->references('id')
+            ->on('products');
             $table->timestamps();
         });
     }
