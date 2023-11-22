@@ -22,3 +22,9 @@ Route::post('achievements', [AchievementController::class, 'store']);
 Route::get('achievements/{id}', [AchievementController::class, 'show']);
 Route::delete('achievements/{id}', [AchievementController::class, 'destroy']);
 Route::put('achievements/{id}', [AchievementController::class, 'update']);
+
+Route::get('productsRequierement', [ProductRequierement::class, 'index']);
+Route::post('productsRequierement', [ProductRequierement::class, 'store']);
+Route::get('productsRequierement/{id}', [ProductRequierement::class, 'show']);
+Route::delete('productsRequierement/{id}', [ProductRequierement::class, 'destroy']);
+Route::put('productsRequierement/{id}', [ProductRequierement::class, 'update']);

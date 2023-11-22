@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\ProductRequierement;
+use Exception;
 use Illuminate\Http\Request;
 
 class ProductRequierementController extends Controller
@@ -10,10 +11,29 @@ class ProductRequierementController extends Controller
 
         $product_id = $request->query('product_id');
 
-        $productsRequierement = ProductRequierement::query()
+        $productsRequierements = ProductRequierement::query()
         -> where('product_id', $product_id)
         -> get();
        
-        return $productsRequierement;
+        return $productsRequierements;
      }
+
+     public function store(Request $request) {
+
+        try {
+            $data = $request->all();
+
+            $request->validate([
+                'product_id' => 'integer|required',
+               
+            ]);
+
+            $productRequierement  = ProductRequierement::create($data);
+
+            return $productRequierement;
+        } catch (Exception $exception) {
+            return response()->json(['message' => $exception->getMessage()], 400);
+        }
+    }
+    
 }
