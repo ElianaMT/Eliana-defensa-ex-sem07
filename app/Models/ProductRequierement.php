@@ -10,5 +10,12 @@ class ProductRequierement extends Model
     use HasFactory;
 
     protected $table ='products_requierements';
-    protected $fillable =['product_id', 'operational_system','memory', 'storage','observations','type'];
+    protected $fillable =[
+        'product_id',
+        'operational_system',
+        'memory',
+        'storage',
+        'observations',
+        'type'
+    ];
 }

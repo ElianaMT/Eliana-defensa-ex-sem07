@@ -3,6 +3,7 @@
 use App\Http\Controllers\AchievementController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductRequierementController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('products', [ProductController::class, 'index']);
@@ -23,8 +24,5 @@ Route::get('achievements/{id}', [AchievementController::class, 'show']);
 Route::delete('achievements/{id}', [AchievementController::class, 'destroy']);
 Route::put('achievements/{id}', [AchievementController::class, 'update']);
 
-Route::get('productsRequierement', [ProductRequierement::class, 'index']);
-Route::post('productsRequierement', [ProductRequierement::class, 'store']);
-Route::get('productsRequierement/{id}', [ProductRequierement::class, 'show']);
-Route::delete('productsRequierement/{id}', [ProductRequierement::class, 'destroy']);
-Route::put('productsRequierement/{id}', [ProductRequierement::class, 'update']);
+Route::get('products_requierements', [ProductRequierementController::class, 'index']);
+Route::post('products_requierements', [ProductRequierementController::class, 'store']);

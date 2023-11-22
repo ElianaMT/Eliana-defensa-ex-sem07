@@ -28,6 +28,15 @@ class ProductRequierementController extends Controller
                
             ]);
 
+            $productRequierementTypeExists= ProductRequierement::query()
+            ->where('product_id',$data['product_id'])
+            ->where('type', $data['type'])
+            ->first();
+
+            if($productRequierementTypeExists){
+                return response()->json(['message' =>'O registro ja foi cadastrado'], 409);
+            }
+
             $productRequierement  = ProductRequierement::create($data);
 
             return $productRequierement;
