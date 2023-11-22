@@ -13,8 +13,18 @@ return new class extends Migration
     {
         Schema::create('products_markers', function (Blueprint $table) {
             $table->id();
-           
+            $table->bigInteger('product_id');
+            $table
+            ->foreign('product_id')
+            ->references('id')
+            ->on('products');
+            $table->bigInteger('marker_id');
+            $table
+            ->foreign('marker_id')
+            ->references('id')
+            ->on('markers');
             $table->timestamps();
+           
         });
     }
 

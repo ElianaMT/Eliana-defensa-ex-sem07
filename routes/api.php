@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MarkerController;
+use App\Http\Controllers\ProductMarkerController;
 use App\Http\Controllers\AchievementController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
@@ -13,10 +14,6 @@ Route::get('products/{id}', [ProductController::class, 'show']);
 Route::delete('products/{id}', [ProductController::class, 'destroy']);
 Route::put('products/{id}', [ProductController::class, 'update']);
 
-Route::get('markers', [MarkerController::class, 'index']);
-Route::post('markers', [MarkerController::class, 'store']);
-Route::get('markers/{id}', [MarkerController::class, 'show']);
-Route::delete('markers/{id}', [MarkerController::class, 'destroy']);
 Route::get('categories', [CategoryController::class, 'index']);
 Route::post('categories', [CategoryController::class, 'store']);
 Route::get('categories/{id}', [CategoryController::class, 'show']);
@@ -31,3 +28,13 @@ Route::put('achievements/{id}', [AchievementController::class, 'update']);
 
 Route::get('products_requierements', [ProductRequierementController::class, 'index']);
 Route::post('products_requierements', [ProductRequierementController::class, 'store']);
+
+Route::get('markers', [MarkerController::class, 'index']);
+Route::post('markers', [MarkerController::class, 'store']);
+Route::get('markers/{id}', [MarkerController::class, 'show']);
+Route::delete('markers/{id}', [MarkerController::class, 'destroy']);
+
+Route::get('product_markers', [ProductMarkerController::class, 'index']);
+Route::post('product_markers', [ProductMarkerController::class, 'store']);
+Route::delete('product_markers/{id}', [ProductMarkerController::class, 'destroy']);
+
