@@ -3,6 +3,7 @@
 use App\Http\Controllers\MarkerController;
 use App\Http\Controllers\ProductMarkerController;
 use App\Http\Controllers\AchievementController;
+use App\Http\Controllers\AvaliationController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductAssetController;
 use App\Http\Controllers\ProductController;
@@ -41,9 +42,13 @@ Route::get('product_markers', [ProductMarkerController::class, 'index']);
 Route::post('product_markers', [ProductMarkerController::class, 'store']);
 Route::delete('product_markers/{id}', [ProductMarkerController::class, 'destroy']);
 
-
 Route::get('products_assets', [ProductAssetController::class, 'index']);
 Route::post('products_assets', [ProductAssetController::class, 'store']);
 Route::get('products_assets/{id}', [ProductAssetController::class, 'show']);
 Route::delete('products_assets/{id}', [ProductAssetController::class, 'destroy']);
 Route::put('products_assets/{id}', [ProductAssetController::class, 'update']);
+
+Route::get('avaliations', [AvaliationController::class, 'index']);
+Route::post('avaliations', [AvaliationController::class, 'store']);
+Route::delete('avaliations/{id}', [AvaliationController::class, 'destroy']);
+Route::put('avaliations/{id}', [AvaliationController::class, 'update']);
