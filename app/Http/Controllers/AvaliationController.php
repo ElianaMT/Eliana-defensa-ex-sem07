@@ -34,6 +34,29 @@ class AvaliationController extends Controller
 
     }
 
+    public function update($id, Request $request){
+        try {
+
+            $avaliation = Avaliation::find($id);
+
+            if(!$avaliation) return response()->json(['message' => 'Avaliacao não encontrada'], 404);
+
+         /*   $request->validate([
+                'name' => [
+                    'required',
+                    Rule::unique('products')->ignore($avaliation->id),
+                ]
+            ]);*/ // para validar con o nome do achievement
+
+            $avaliation->update($request->all());
+
+            return $avaliation;
+
+        } catch (Exception $exception) {
+            return response()->json(['message' => $exception->getMessage()], 400);
+        }
+    }
+
     public function destroy($id){
         $avaliation = Avaliation::find($id);
 
