@@ -45,6 +45,30 @@ class ProductRequierementController extends Controller
         }
     }
 
+    public function update($id, Request $request){
+        try {
+
+            $productRequierement = ProductRequierement::find($id);
+
+            if(!$productRequierement) return response()->json(['message' => 'Product requirement não encontrado'], 404);
+
+         /*   $request->validate([
+                'name' => [
+                    'required',
+                    Rule::unique('products')->ignore($productRequierement->id),
+                ]
+            ]);*/ // para validar con o nome do achievement
+
+            $productRequierement->update($request->all());
+
+            return $productRequierement;
+
+        } catch (Exception $exception) {
+            return response()->json(['message' => $exception->getMessage()], 400);
+        }
+    }
+
+
     public function destroy($id){
         $productRequierement = ProductRequierement::find($id);
 
