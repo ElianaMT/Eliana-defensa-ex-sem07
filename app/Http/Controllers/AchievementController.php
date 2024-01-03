@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Achievement;
 use Exception;
 use Illuminate\Http\Request;
-
+use Illuminate\Validation\Rule;
 
 class AchievementController extends Controller
 {
@@ -39,9 +39,28 @@ class AchievementController extends Controller
         }
     }
     
-    public function update($id, Request $request) {
-        // update
-     }
+    public function update($id, Request $request){
+        try {
+
+            $achievement = Achievement::find($id);
+
+            if(!$achievement) return response()->json(['message' => 'Premio não encontrado'], 404);
+
+         /*   $request->validate([
+                'name' => [
+                    'required',
+                    Rule::unique('products')->ignore($achievement->id),
+                ]
+            ]);*/ // para validar con o nome do achievement
+
+            $achievement->update($request->all());
+
+            return $achievement;
+
+        } catch (Exception $exception) {
+            return response()->json(['message' => $exception->getMessage()], 400);
+        }
+    }
 
      public function destroy($id){
         $achievement = Achievement::find($id);
