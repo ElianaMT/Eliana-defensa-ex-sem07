@@ -33,4 +33,14 @@ class AvaliationController extends Controller
         }
 
     }
+
+    public function destroy($id){
+        $avaliation = Avaliation::find($id);
+
+        if(!$avaliation) return response()->json(['message' => 'O markador do produto não encontrado'], 404);
+
+        $avaliation->delete();
+
+        return response('', 204);
+    }
 }
