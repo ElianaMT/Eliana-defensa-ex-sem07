@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('avaliations', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('product_id');
+            $table->text('description');
+            $table->boolean('recommended');
+
+             $table
+            ->foreign('product_id')
+            ->references('id')
+            ->on('products');
             $table->timestamps();
         });
     }
