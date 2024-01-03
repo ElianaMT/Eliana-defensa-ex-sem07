@@ -29,7 +29,7 @@ class AchievementController extends Controller
                 'product_id' => 'integer|required',
                 'url' => 'string|required',
                 'name' => 'string|required'
-            ]);+
+            ]);
 
             $achievement  = Achievement::create($data);
 
