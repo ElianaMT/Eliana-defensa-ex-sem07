@@ -29,6 +29,8 @@ Route::put('achievements/{id}', [AchievementController::class, 'update']);
 
 Route::get('products_requierements', [ProductRequierementController::class, 'index']);
 Route::post('products_requierements', [ProductRequierementController::class, 'store']);
+Route::delete('products_requierements/{id}', [ProductRequierementController::class, 'destroy']);
+Route::put('products_requierements/{id}', [ProductRequierementController::class, 'update']);
 
 Route::get('markers', [MarkerController::class, 'index']);
 Route::post('markers', [MarkerController::class, 'store']);
