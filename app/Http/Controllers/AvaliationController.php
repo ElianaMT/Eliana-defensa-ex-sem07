@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class AvaliationController extends Controller
 {
+
+    public function index(){
+        $avaliations = Avaliation::all();
+        return $avaliations;
+     }
+
     public function store(Request $request){
         try {
             $request->validate([
