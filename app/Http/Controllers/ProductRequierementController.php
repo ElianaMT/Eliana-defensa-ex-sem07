@@ -44,5 +44,15 @@ class ProductRequierementController extends Controller
             return response()->json(['message' => $exception->getMessage()], 400);
         }
     }
+
+    public function destroy($id){
+        $productRequierement = ProductRequierement::find($id);
+
+        if(!$productRequierement) return response()->json(['message' => 'Product requierement não encontrada'], 404);
+
+        $productRequierement->delete();
+
+        return response('', 204);
+    }
     
 }
