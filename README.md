@@ -439,7 +439,7 @@ O projeto foi dividido em uma estrutura de pastas para organizar os models, cont
 > Foi utilizado o app https://dbdiagram.io/ para modelagem previa da base postgresql.
 
 <p align="center">
-<img alt="imagen diagram" width="500" src="public/images/db_diagram.png">
+<img alt="imagen diagram" width="500" src="public/images/diagramabd.png">
 </p>
 
 ### Acesse a documentação do modelo
