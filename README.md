@@ -79,7 +79,7 @@ Uma aplicação web que oferece funcionalidades semelhantes às da plataforma St
 **Exemplo de Cadastro**
 
 <p align="center">
-<img alt="imagen cadastro_user" width="300" src="public/images/S01_products.png">
+<img alt="imagen cadastro_user" width="500" src="public/images/S01_products.png">
 </p>
 
 | Parâmetro    | Tipo     | Descrição                                        |
@@ -121,7 +121,7 @@ Request JSON exemplo
 **Exemplo de Cadastro**
 
 <p align="center">
-<img alt="imagen login" width="300" src="public/images/S02.Marker.png">
+<img alt="imagen login" width="500" src="public/images/S02.Marker.png">
 </p>
 
 | Parâmetro  | Tipo     | Descrição                          |
@@ -161,7 +161,7 @@ Request JSON exemplo
 **Exemplo de Cadastro**
 
 <p align="center">
-<img alt="imagen login" width="300" src="public/images/cadastro_product_markers.png">
+<img alt="imagen login" width="500" src="public/images/cadastro_product_markers.png">
 </p>
 
 | Parâmetro  | Tipo     | Descrição                          |
@@ -203,7 +203,7 @@ Request JSON exemplo
 **Exemplo de Cadastro**
 
 <p align="center">
-<img alt="imagen login" width="300" src="public/images/s04.avaliaciones.png">
+<img alt="imagen login" width="500" src="public/images/s04.avaliaciones.png">
 </p>
 
 | Parâmetro  | Tipo     | Descrição                          |
@@ -247,7 +247,7 @@ Request JSON exemplo
 **Exemplo de Cadastro**
 
 <p align="center">
-<img alt="imagen login" width="300" src="public/images/s05.assets.png">
+<img alt="imagen login" width="500" src="public/images/s05.assets.png">
 </p>
 
 | Parâmetro  | Tipo     | Descrição                          |
@@ -293,7 +293,7 @@ Request JSON exemplo
 **Exemplo de Cadastro**
 
 <p align="center">
-<img alt="imagen login" width="300" src="public/images/s06.categories.png">
+<img alt="imagen login" width="500" src="public/images/s06.categories.png">
 </p>
 
 | Parâmetro  | Tipo     | Descrição                          |
@@ -335,7 +335,7 @@ Request JSON exemplo
 **Exemplo de Cadastro**
 
 <p align="center">
-<img alt="imagen login" width="300" src="public/images/s07.achievements.png">
+<img alt="imagen login" width="500" src="public/images/s07.achievements.png">
 </p>
 
 | Parâmetro  | Tipo     | Descrição                          |
@@ -381,7 +381,7 @@ Request JSON exemplo
 **Exemplo de Cadastro**
 
 <p align="center">
-<img alt="imagen login" width="300" src="public/images/s08.product_requirement.png">
+<img alt="imagen login" width="500" src="public/images/s08.product_requirement.png">
 </p>
 
 | Parâmetro  | Tipo     | Descrição                          |
@@ -424,7 +424,7 @@ Request JSON exemplo
 
 ## Técnicas e padrões utilizadas
 
-O projeto foi dividido em uma estruturas de pastas para organizar os models, controllers, middlewares e database
+O projeto foi dividido em uma estrutura de pastas para organizar os models, controllers e database
 
 <p align="center">
 
