@@ -18,7 +18,6 @@ Route::put('products/{id}', [ProductController::class, 'update']);
 
 Route::get('categories', [CategoryController::class, 'index']);
 Route::post('categories', [CategoryController::class, 'store']);
-Route::get('categories/{id}', [CategoryController::class, 'show']);
 Route::delete('categories/{id}', [CategoryController::class, 'destroy']);
 Route::put('categories/{id}', [CategoryController::class, 'update']);
 
@@ -42,7 +41,6 @@ Route::delete('product_markers/{product_id}/{marker_id}', [ProductMarkerControll
 
 Route::get('products_assets', [ProductAssetController::class, 'index']);
 Route::post('products_assets', [ProductAssetController::class, 'store']);
-Route::get('products_assets/{id}', [ProductAssetController::class, 'show']);
 Route::delete('products_assets/{id}', [ProductAssetController::class, 'destroy']);
 Route::put('products_assets/{id}', [ProductAssetController::class, 'update']);
 

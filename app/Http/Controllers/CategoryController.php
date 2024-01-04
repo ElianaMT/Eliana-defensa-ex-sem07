@@ -32,13 +32,6 @@ class CategoryController extends Controller
  
      }
  
-     public function show($id){
-         $category = Category::find($id);
- 
-         if(!$category) return response()->json(['message' => 'Categoria não encontrada'], 404);
- 
-         return $category;
-     }
  
      public function update($id, Request $request){
          try {

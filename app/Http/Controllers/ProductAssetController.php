@@ -39,13 +39,6 @@ class ProductAssetController extends Controller
 
      }
 
-     public function show($id){
-        $productAsset = ProductAsset::find($id);
-
-        if(!$productAsset) return response()->json(['message' => 'Produto asset não encontrado'], 404);
-
-        return $productAsset;
-    }
 
      public function update($id, Request $request){
         try {
