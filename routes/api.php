@@ -24,7 +24,6 @@ Route::put('categories/{id}', [CategoryController::class, 'update']);
 
 Route::get('achievements', [AchievementController::class, 'index']);
 Route::post('achievements', [AchievementController::class, 'store']);
-Route::get('achievements/{id}', [AchievementController::class, 'show']);
 Route::delete('achievements/{id}', [AchievementController::class, 'destroy']);
 Route::put('achievements/{id}', [AchievementController::class, 'update']);
 
@@ -47,7 +46,7 @@ Route::get('products_assets/{id}', [ProductAssetController::class, 'show']);
 Route::delete('products_assets/{id}', [ProductAssetController::class, 'destroy']);
 Route::put('products_assets/{id}', [ProductAssetController::class, 'update']);
 
-Route::get('avaliations', [AvaliationController::class, 'index']);
+Route::get('avaliations/{product_id}', [AvaliationController::class, 'index']);
 Route::post('avaliations', [AvaliationController::class, 'store']);
 Route::delete('avaliations/{id}', [AvaliationController::class, 'destroy']);
 Route::put('avaliations/{id}', [AvaliationController::class, 'update']);

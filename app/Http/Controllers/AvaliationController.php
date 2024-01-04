@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 class AvaliationController extends Controller
 {
 
-    public function index(){
-        $avaliations = Avaliation::all();
+    public function index(Request $request, $product_id){
+        $avaliations = Avaliation::where('product_id', $product_id)->get();
+
         return $avaliations;
      }
 
