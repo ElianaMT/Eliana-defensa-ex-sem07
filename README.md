@@ -1,68 +1,486 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/6zgAkAP5)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=12870304&assignment_repo_type=AssignmentRepo)
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Projeto "GAMING CHANNEL"
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="public/images/gamechannel.jpg" alt="Logo">
 </p>
 
-## About Laravel
+Uma aplicação web que oferece funcionalidades semelhantes às da plataforma Steam. Isso inclui a gestão de biblioteca de jogos, compra e venda de títulos, integração de comunidade, chat, análise de desempenho, e outras características essenciais presentes em plataformas de jogos online.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Índice
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   [Funcionalidades do Projeto](#funcionalidades)
+-   [Documentação da API](#layout)
+-   [Demostratração](#demostracao)
+-   [Técnicas e padrões utilizadas](#tecnicas)
+-   [Como rodar este projeto?](#rodar)
+-   [Technologias Utilizadas](#technologias)
+-   [Autora](#autora)
+-   [Proximos passos](#passos)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<a name="funcionalidades"></a>
 
-## Learning Laravel
+## Funcionalidades do Projeto
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   [x] S01 - Products
+- Cadastro de um produto
+- Listagem de todos os produtos
+- Atualização de um produto
+- Deleção de um produto
+- Visualização de um produto
+-   [x] S02 - Markers
+- Cadastro de um marcador
+- Listagem de todos os marcadores
+- Exclusão de um marcador
+-   [x] S03 - Avaliações
+- Cadastro de uma avaliação
+- Listagem de todas as avaliações de um jogo
+- Atualização de uma avaliação
+- Deleção de uma avaliação
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+-   [x] S04 - Assets
+- Cadastro de ativos de um jogo
+- Listagem de todos os ativos
+- Atualização de um ativo de um jogo
+- Deleção de um ativo de um jogo
+-   [x] S05 - Categories
+- Cadastro de categoria
+- Listagem de todas as categorias
+- Atualização de uma categoria
+- Deleção de uma categoria
+-   [x] S06 - Achievements
+- Cadastro de conquista
+- Listagem de todas as conquistas de um jogo
+- Atualização de conquista
+- Deleção de uma conquista
+-   [x] S07 - Product Requirements
+- Cadastro de requisito
+- Listagem de requisitos de um jogo
+- Atualização de requisito
+- Deleção de um requisito
+<a name="layout"></a>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Documentação da API
 
-## Laravel Sponsors
+### Endpoints - Rotas
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+#### S01 - Products
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+> Cadastro: `HTTP POST /api/products`
+> Listagem: `HTTP GET /api/products`
+> Atualização: `HTTP PUT /api/products/:id`
+> Deleção: `HTTP DELETE /api/products/:id`
+> Visualização: `HTTP GET /api/products/:id`
 
-## Contributing
+`Exemplo de Cadastro`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<p align="center">
+<img alt="imagen cadastro_user" width="300" src="public/images/S01_products.png">
+</p>
 
-## Code of Conduct
+| Parâmetro    | Tipo     | Descrição                                        |
+| ------------ | -------- | :----------------------------------------------- |
+| `id`         | `int`    | **Autoincremental** . Chave primaria             |
+| `name`       | `string` | **Obrigatório** . Nome do jogo,único               |
+| `price`      | `decimal` | **Obrigatório** . Default:0       |
+| `description` | `string` | **Obrigatório** . Description do jogo           |
+| `cover`        | `string` | **Obrigatório** . Cover usado no jogo |         |
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Request JSON exemplo
 
-## Security Vulnerabilities
+```http
+{
+  "name": "RimWorld",
+  "price": "14",
+  "description" : "Un simulador de colonias de ciencia ficción dirigido por una brillante Inteligencia Artificial que narrará la historia. Genera historias al simular psicología, ecología, combate, clima, biomas, diplomacia, relaciones interpersonales, arte, medicina, comercio y mucho más.",
+  "cover": "Cover Sky"
+}
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+| Response Status | Descrição       |
+| --------------- | :-------------- |
+| `200`           | sucesso         |
+| `400`           | dados inválidos |
 
-## License
+</p>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#### S02 - Markers
+##### S02.1- Tabela markers
+
+
+> Cadastro:`HTTP POST /api/markers`
+> Listagem: `HTTP GET /api/markers`
+> Deleção: `HTTP DELETE /api/markers/:id`
+
+`Exemplo de Cadastro`
+
+<p align="center">
+<img alt="imagen login" width="300" src="public/images/S02.Marker.png">
+</p>
+
+| Parâmetro  | Tipo     | Descrição                          |
+| ---------- | -------- | :--------------------------------- |
+| `id`         | `int`    | **Autoincremental** . Chave primaria |
+| `name`       | `string` | **Obrigatório** . Nome do marcador de um jogo,único       
+| `color`    | `string` | **Obrigatório** . Color do marcador de um jogo |
+
+Request JSON exemplo
+
+```http
+{
+  "name": "Novo",
+  "color": "#FFF1F1",
+  "updated_at": "2024-01-04T02:07:49.000000Z",
+  "created_at": "2024-01-04T02:07:49.000000Z",
+  "id": 6
+}
+```
+
+| Response Status | Descrição       |
+| --------------- | :-------------- |
+| `201`           | sucesso         |
+| `400`           | dados inválidos |
+
+</p>
+
+##### S02.2- Tabela products_markers
+
+
+> Cadastro:`HTTP POST /api/product_markers`
+> Listagem: `HTTP GET /product_markers/{product_id}`
+> Deleção: `HTTP DELETE /api/product_markers/{product_id}/{marker_id}`
+
+`Exemplo de Cadastro`
+
+<p align="center">
+<img alt="imagen login" width="300" src="public/images/cadastro_product_markers.png">
+</p>
+
+| Parâmetro  | Tipo     | Descrição                          |
+| ---------- | -------- | :--------------------------------- |
+| `id`         | `int`    | **Autoincremental** . Chave primaria |
+| `product_id`       | `int` | **Obrigatório** . Id do jogo,único |      
+| `marker_id`    | `int` | **Obrigatório** . Id do marcador de um jogo |
+
+Request JSON exemplo
+
+```http
+{    
+    "product_id": 6,
+    "marker_id": 1,
+    "created_at": "2024-01-04T02:45:05.000000Z",
+    "updated_at": "2024-01-04T02:45:05.000000Z",
+    "id": 12
+}
+```
+
+| Response Status | Descrição       |
+| --------------- | :-------------- |
+| `201`           | sucesso         |
+| `400`           | dados inválidos |
+
+</p>
+
+#### S03 - Avaliações
+
+
+> Cadastro: `HTTP POST /api/avaliations`
+> Listagem: `HTTP GET /api/avaliations/{product_id}`
+> Atualização: `HTTP PUT /api/avaliations/:id`
+> Deleção: `HTTP DELETE /api/avaliations/:id`
+
+`Exemplo de Cadastro`
+
+<p align="center">
+<img alt="imagen login" width="300" src="public/images/s04.avaliaciones.png">
+</p>
+
+| Parâmetro  | Tipo     | Descrição                          |
+| ---------- | -------- | :--------------------------------- |
+| `id`         | `int`    | **Autoincremental** . Chave primaria |
+| `product_id`       | `int` | **Obrigatório** . Id do jogo|       
+| `description`    | `string` | **Obrigatório** . Descrição da avaliação |
+| `recommended`    | `boolean` | **Obrigatório** .  |
+
+Request JSON exemplo
+
+```http
+{
+  "product_id": 7,
+  "description": "Desenvolvimento de habilidades como atenção, criatividade, memória",
+  "recommended": true,
+  "updated_at": "2024-01-04T03:22:33.000000Z",
+  "created_at": "2024-01-04T03:22:33.000000Z",
+  "id": 5
+}
+```
+
+| Response Status | Descrição       |
+| --------------- | :-------------- |
+| `201`           | sucesso         |
+| `400`           | dados inválidos |
+
+</p>
+
+#### S04 - Assets
+
+
+> Cadastro: `HTTP POST /api/products_assets`
+> Listagem: `HTTP GET /api/api/products_assets/?product_id=:id`
+> Atualização: `HTTP PUT /api/products_assets/:id`
+> Deleção: `HTTP DELETE /api/products_assets/:id`
+
+`Exemplo de Cadastro`
+
+<p align="center">
+<img alt="imagen login" width="300" src="public/images/s05.assets.png">
+</p>
+
+| Parâmetro  | Tipo     | Descrição                          |
+| ---------- | -------- | :--------------------------------- |
+| `id`         | `int`    | **Autoincremental** . Chave primaria |
+| `product_id`       | `int` | **Obrigatório** . Id do jogo|       
+| `name`    | `string` | **Obrigatório** . Nome do ativo |
+| `url`    | `string` | **Obrigatório** . Url do ativo |
+| `type_games_assets`    | `string` | Valores:'VIDEO','IMAGEN'|
+
+Request JSON exemplo
+
+```http
+{
+  "product_id": 7,
+  "name": "Ambient Background Music Pack",
+  "url": "https://assetstore.unity.com/packages/audio/ambient/ambient-background-music-pack-vol-1-220474",
+  "type": "VIDEO",
+  "updated_at": "2024-01-04T03:55:04.000000Z",
+  "created_at": "2024-01-04T03:55:04.000000Z",
+  "id": 4
+}
+```
+
+| Response Status | Descrição       |
+| --------------- | :-------------- |
+| `201`           | sucesso         |
+| `400`           | dados inválidos |
+
+</p>
+
+#### S05 - Categories
+
+
+> Cadastro: `HTTP POST /api/categories`
+> Listagem: `HTTP GET /api/categories`
+> Atualização: `HTTP PUT /api/categories/:id`
+> Deleção: `HTTP DELETE /api/categories/:id`
+
+`Exemplo de Cadastro`
+
+<p align="center">
+<img alt="imagen login" width="300" src="public/images/s06.categories.png">
+</p>
+
+| Parâmetro  | Tipo     | Descrição                          |
+| ---------- | -------- | :--------------------------------- |
+| `id`         | `int`    | **Autoincremental** . Chave primaria |      
+| `name`    | `string` | **Obrigatório** . Nome da categoria do jogo|
+| `description`    | `string` | **Obrigatório** . Description da categoria do jogo |
+
+Request JSON exemplo
+
+```http
+{
+    "name": "Puzle",
+    "description": "É um jogo de peças que, quando dispostas de forma ordenada, formam uma figura.",
+    "created_at": "2024-01-04T04:35:53.000000Z",
+    "updated_at": "2024-01-04T04:35:53.000000Z",
+    "id": 6
+}
+```
+
+| Response Status | Descrição       |
+| --------------- | :-------------- |
+| `201`           | sucesso         |
+| `400`           | dados inválidos |
+
+</p>
+
+#### S06 -  Achievements
+
+
+> Cadastro: `HTTP POST /api/achievements`
+> Listagem: `HTTP GET /api/achievements?product_id=:id`
+> Atualização: `HTTP PUT /api/achievements/:id`
+> Deleção: `HTTP DELETE /api/achievements/:id`
+
+`Exemplo de Cadastro`
+
+<p align="center">
+<img alt="imagen login" width="300" src="public/images/s07.achievements.png">
+</p>
+
+| Parâmetro  | Tipo     | Descrição                          |
+| ---------- | -------- | :--------------------------------- |
+| `id`         | `int`    | **Autoincremental** . Chave primaria |  
+| `product_id`       | `int` | **Obrigatório** . Id do jogo| 
+| `url`    | `string` | **Obrigatório** . Url da conquista |    
+| `name`    | `string` | **Obrigatório** . Nome da conquista do jogo. Unico|
+| `description`    | `string` | **Obrigatório** . Description da conquista do jogo |
+
+Request JSON exemplo
+
+```http
+{
+  "name": "Troféu de bronze",
+  "description": "Derrote 100 inimigos em combate corpo a corpo sem receber dano.",
+  "url": "https://cdn.cloudflare.steamstatic.com/steam/apps/2325281/capsule_sm_120.jpg?t=1697536842",
+  "product_id": 7,
+  "updated_at": "2024-01-04T05:04:47.000000Z",
+  "created_at": "2024-01-04T05:04:47.000000Z",
+  "id": 13
+}
+```
+
+| Response Status | Descrição       |
+| --------------- | :-------------- |
+| `201`           | sucesso         |
+| `400`           | dados inválidos |
+
+</p>
+
+#### S07 -  Product Requirements
+
+
+> Cadastro: `HTTP POST /api/products_requierements`
+> Listagem: `HTTP GET /api/products_requierements?product_id=:id`
+> Atualização: `HTTP PUT /api/products_requierements/:id`
+> Deleção: `HTTP DELETE /api/products_requierements/:id`
+
+`Exemplo de Cadastro`
+
+<p align="center">
+<img alt="imagen login" width="300" src="public/images/s08.product_requirement.png">
+</p>
+
+| Parâmetro  | Tipo     | Descrição                          |
+| ---------- | -------- | :--------------------------------- |
+| `id`         | `int`    | **Autoincremental** . Chave primaria |  
+| `product_id`       | `int` | **Obrigatório** . Id do jogo| 
+| `memory`    | `string` | **Obrigatório** . Memória necessária para usar o jogo |    
+| `storage`    | `string` | **Obrigatório** . Memória necessária para usar o jogo|
+| `observations`    | `string` | **Obrigatório** . Descrição   do requisito |
+| `type`    | `string` | Valores:'MINIMUNS','RECOMMENDED'|
+
+Request JSON exemplo
+
+```http
+{
+  "product_id": 7,
+  "operational_system": "iOS",
+  "memory": "12 GB",
+  "storage": "256 GB SSD",
+  "observations": "Perfeito para jogos e aplicações intensivas.",
+  "type": "RECOMMENDED",
+  "updated_at": "2024-01-04T05:37:56.000000Z",
+  "created_at": "2024-01-04T05:37:56.000000Z",
+  "id": 6
+}
+```
+
+| Response Status | Descrição       |
+| --------------- | :-------------- |
+| `201`           | sucesso         |
+| `400`           | dados inválidos |
+
+</p>
+
+## Demostratração
+
+[Assista ao vídeo](https://youtu.be/-zopfN3ghwo)
+
+<a name="tecnicas"></a>
+
+## Técnicas e padrões utilizadas
+
+O projeto foi dividido em uma estruturas de pastas para organizar os models, controllers, middlewares e database
+
+<p align="center">
+
+| Local            |                   Uso                   |
+| ---------------- | :-------------------------------------: |
+| /src/models      |    Contém todos modelos da aplicação    |
+| /src/controllers |  Contém todos controllers da aplicação  |
+| /src/database    | Contém todas as migrations da aplicação |
+
+### Modelagem da base de dados PostgreSQL
+
+> Foi utilizado o app https://dbdiagram.io/ para modelagem previa da base postgresql.
+
+<p align="center">
+<img alt="imagen diagram" width="500" src="public/images/db_diagram.png">
+</p>
+
+### Acesse a documentação do modelo
+
+> https://dbdiagram.io/d/steam-65964807ac844320ae3721bf
+
+### Organização de etapas e cronograma
+
+> https://trello.com/c/U9QeI8q6/122-m2s07-ex01-criando-projeto
+
+</p>
+
+<a name="rodar"></a>
+
+## Como rodar este projeto?
+
+### APP
+
+```bash
+# Clone este repositório
+$ https://github.com/ElianaMT/Eliana-defensa-ex-sem07
+
+# Crie uma base de dados no PostgreSQL com nome api_steam
+$ base de dados PostgreSQL com nome api_steam
+
+# Crie um arquivo .env na raiz do projeto com os seguintes parametros
+DB_CONNECTION=''
+DB_HOST=''
+DB_PORT=''
+DB_DATABASE=''
+DB_USERNAME=''
+DB_PASSWORD=''
+
+# Instale as dependencias
+$ npm install
+
+# Execute a aplicação
+$ npm start
+```
+
+<a name="technologias"></a>
+
+## Technologias Utilizadas
+
+1. [PHP](https://www.php.net/)
+2. JavaScript
+3. [Laravel](https://laravel.com/)
+
+<a name="autora"></a>
+
+## Autora
+
+<p align="center">
+<img alt="imagen cadastro_user" width="200" src="public/images/Eliana.jpg">
+</p>
+
+[Linkedin](https://www.linkedin.com/in/eliana-morillo-t-48888569/)
+
+<a name="passos"></a>
+
+## Proximos passos
+
+-   [ ] Implementar compra e venda de títulos.
+-   [ ] Implementar integração de comunidade.
+-   [ ] Implementar chat.
+-   [ ] Implementar análise de desempenho.
+ 
