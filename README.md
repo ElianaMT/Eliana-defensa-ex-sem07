@@ -21,38 +21,38 @@ Uma aplicação web que oferece funcionalidades semelhantes às da plataforma St
 
 ## Funcionalidades do Projeto
 
--   [x] S01 - Products
+ ####  S01 - Products
 - Cadastro de um produto
 - Listagem de todos os produtos
 - Atualização de um produto
 - Deleção de um produto
 - Visualização de um produto
--   [x] S02 - Markers
+ #### S02 - Markers
 - Cadastro de um marcador
 - Listagem de todos os marcadores
 - Exclusão de um marcador
--   [x] S03 - Avaliações
+ #### S03 - Avaliações
 - Cadastro de uma avaliação
 - Listagem de todas as avaliações de um jogo
 - Atualização de uma avaliação
 - Deleção de uma avaliação
 
--   [x] S04 - Assets
+ #### S04 - Assets
 - Cadastro de ativos de um jogo
 - Listagem de todos os ativos
 - Atualização de um ativo de um jogo
 - Deleção de um ativo de um jogo
--   [x] S05 - Categories
+ #### S05 - Categories
 - Cadastro de categoria
 - Listagem de todas as categorias
 - Atualização de uma categoria
 - Deleção de uma categoria
--   [x] S06 - Achievements
+ #### S06 - Achievements
 - Cadastro de conquista
 - Listagem de todas as conquistas de um jogo
 - Atualização de conquista
 - Deleção de uma conquista
--   [x] S07 - Product Requirements
+ #### S07 - Product Requirements
 - Cadastro de requisito
 - Listagem de requisitos de um jogo
 - Atualização de requisito
@@ -76,7 +76,7 @@ Uma aplicação web que oferece funcionalidades semelhantes às da plataforma St
 
 > Visualização: `HTTP GET /api/products/:id`
 
-`Exemplo de Cadastro`
+**Exemplo de Cadastro**
 
 <p align="center">
 <img alt="imagen cadastro_user" width="300" src="public/images/S01_products.png">
@@ -113,10 +113,12 @@ Request JSON exemplo
 
 
 > Cadastro:`HTTP POST /api/markers`
+
 > Listagem: `HTTP GET /api/markers`
+
 > Deleção: `HTTP DELETE /api/markers/:id`
 
-`Exemplo de Cadastro`
+**Exemplo de Cadastro**
 
 <p align="center">
 <img alt="imagen login" width="300" src="public/images/S02.Marker.png">
@@ -151,10 +153,12 @@ Request JSON exemplo
 
 
 > Cadastro:`HTTP POST /api/product_markers`
+
 > Listagem: `HTTP GET /product_markers/{product_id}`
+
 > Deleção: `HTTP DELETE /api/product_markers/{product_id}/{marker_id}`
 
-`Exemplo de Cadastro`
+**Exemplo de Cadastro**
 
 <p align="center">
 <img alt="imagen login" width="300" src="public/images/cadastro_product_markers.png">
@@ -189,11 +193,14 @@ Request JSON exemplo
 
 
 > Cadastro: `HTTP POST /api/avaliations`
+
 > Listagem: `HTTP GET /api/avaliations/{product_id}`
+
 > Atualização: `HTTP PUT /api/avaliations/:id`
+
 > Deleção: `HTTP DELETE /api/avaliations/:id`
 
-`Exemplo de Cadastro`
+**Exemplo de Cadastro**
 
 <p align="center">
 <img alt="imagen login" width="300" src="public/images/s04.avaliaciones.png">
@@ -230,11 +237,14 @@ Request JSON exemplo
 
 
 > Cadastro: `HTTP POST /api/products_assets`
+
 > Listagem: `HTTP GET /api/api/products_assets/?product_id=:id`
+
 > Atualização: `HTTP PUT /api/products_assets/:id`
+
 > Deleção: `HTTP DELETE /api/products_assets/:id`
 
-`Exemplo de Cadastro`
+**Exemplo de Cadastro**
 
 <p align="center">
 <img alt="imagen login" width="300" src="public/images/s05.assets.png">
@@ -273,11 +283,14 @@ Request JSON exemplo
 
 
 > Cadastro: `HTTP POST /api/categories`
+
 > Listagem: `HTTP GET /api/categories`
+
 > Atualização: `HTTP PUT /api/categories/:id`
+
 > Deleção: `HTTP DELETE /api/categories/:id`
 
-`Exemplo de Cadastro`
+**Exemplo de Cadastro**
 
 <p align="center">
 <img alt="imagen login" width="300" src="public/images/s06.categories.png">
@@ -312,11 +325,14 @@ Request JSON exemplo
 
 
 > Cadastro: `HTTP POST /api/achievements`
+
 > Listagem: `HTTP GET /api/achievements?product_id=:id`
+
 > Atualização: `HTTP PUT /api/achievements/:id`
+
 > Deleção: `HTTP DELETE /api/achievements/:id`
 
-`Exemplo de Cadastro`
+**Exemplo de Cadastro**
 
 <p align="center">
 <img alt="imagen login" width="300" src="public/images/s07.achievements.png">
@@ -355,11 +371,14 @@ Request JSON exemplo
 
 
 > Cadastro: `HTTP POST /api/products_requierements`
+
 > Listagem: `HTTP GET /api/products_requierements?product_id=:id`
+
 > Atualização: `HTTP PUT /api/products_requierements/:id`
+
 > Deleção: `HTTP DELETE /api/products_requierements/:id`
 
-`Exemplo de Cadastro`
+**Exemplo de Cadastro**
 
 <p align="center">
 <img alt="imagen login" width="300" src="public/images/s08.product_requirement.png">
