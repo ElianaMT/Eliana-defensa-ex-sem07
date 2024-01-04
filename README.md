@@ -67,9 +67,13 @@ Uma aplicação web que oferece funcionalidades semelhantes às da plataforma St
 
 
 > Cadastro: `HTTP POST /api/products`
+
 > Listagem: `HTTP GET /api/products`
+
 > Atualização: `HTTP PUT /api/products/:id`
+
 > Deleção: `HTTP DELETE /api/products/:id`
+
 > Visualização: `HTTP GET /api/products/:id`
 
 `Exemplo de Cadastro`
