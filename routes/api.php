@@ -35,12 +35,11 @@ Route::put('products_requierements/{id}', [ProductRequierementController::class,
 
 Route::get('markers', [MarkerController::class, 'index']);
 Route::post('markers', [MarkerController::class, 'store']);
-Route::get('markers/{id}', [MarkerController::class, 'show']);
 Route::delete('markers/{id}', [MarkerController::class, 'destroy']);
 
-Route::get('product_markers', [ProductMarkerController::class, 'index']);
+Route::get('product_markers/{product_id}', [ProductMarkerController::class, 'index']);
 Route::post('product_markers', [ProductMarkerController::class, 'store']);
-Route::delete('product_markers/{id}', [ProductMarkerController::class, 'destroy']);
+Route::delete('product_markers/{product_id}/{marker_id}', [ProductMarkerController::class, 'destroy']);
 
 Route::get('products_assets', [ProductAssetController::class, 'index']);
 Route::post('products_assets', [ProductAssetController::class, 'store']);

@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 class ProductMarkerController extends Controller
 {
 
-    public function index(){
-        $productsMarkers = ProductMarker::all();
+    public function index(Request $request, $product_id){
+        $productsMarkers = ProductMarker::where('product_id', $product_id)->get();
         return $productsMarkers;
      }
 
@@ -33,10 +33,12 @@ class ProductMarkerController extends Controller
 
     }
 
-    public function destroy($id){
-        $productMarker = ProductMarker::find($id);
+    public function destroy(Request $request, $product_id, $marker_id){
+        $productMarker = ProductMarker::where('product_id', $product_id)
+        ->where('marker_id', $marker_id)
+        ->first();
 
-        if(!$productMarker) return response()->json(['message' => 'O markador do produto não encontrado'], 404);
+        if(!$productMarker) return response()->json(['message' => 'Marcador do produto não encontrado'], 404);
 
         $productMarker->delete();
 
